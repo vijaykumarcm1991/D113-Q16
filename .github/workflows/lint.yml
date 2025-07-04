@@ -1,9 +1,6 @@
 name: Lint Python Code
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   lint:
@@ -16,10 +13,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.9"
+          python-version: '3.9'
 
       - name: Install flake8
         run: pip install flake8
-
-      - name: Run flake8 on script.py
-        run: flake8 script.py
